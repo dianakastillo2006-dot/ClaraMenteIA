@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaraMente IA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>ClaraMente IA</h1>
+    <p class="slogan">Encuentra tu calma. Enfoca tu mente.</p>
+  </header>
+
+  <main>
+    <section id="menu">
+      <button class="option" onclick="showSection('pomodoro')">🍅 Técnica Pomodoro</button>
+      <button class="option" onclick="showSection('estado')">🧠 Estado Mental</button>
+      <button class="option" onclick="showSection('mindfulness')">🌿 Mindfulness</button>
+      <button class="option" onclick="showSection('logros')">🏆 Logros</button>
+      <button class="option" onclick="showSection('dashboard')">📊 Dashboard</button>
+    </section>
+
+    <section id="pomodoro" class="hidden">
+      <h2>🍅 Técnica Pomodoro</h2>
+      <div id="timer">25:00</div>
+      <button id="start">Iniciar</button>
+      <button id="reset">Reiniciar</button>
+    </section>
+
+    <section id="estado" class="hidden">
+      <h2>🧠 Detección de Estado Mental</h2>
+      <p>Responde estas preguntas para obtener una recomendación personalizada:</p>
+      <label>Nivel de energía: <input type="range" id="energia" min="1" max="10" value="5"></label>
+      <label>Nivel de concentración: <input type="range" id="concentracion" min="1" max="10" value="5"></label>
+      <label>Nivel de estrés o ansiedad: <input type="range" id="estres" min="1" max="10" value="5"></label>
+      <button onclick="analizarEstado()">Analizar estado</button>
+      <div id="resultado"></div>
+    </section>
+
+    <section id="mindfulness" class="hidden">
+      <h2>🌿 Ejercicio de Mindfulness</h2>
+      <p>Presiona “Empezar” para iniciar el ejercicio guiado de respiración.</p>
+      <div id="breathingDisplay">Presiona empezar</div>
+      <button id="startBreathing">Empezar</button>
+      <button id="stopBreathing">Finalizar</button>
+    </section>
+
+    <section id="logros" class="hidden">
+      <h2>🏆 Logros</h2>
+      <div class="achievements">
+        <div class="achievement" id="logro1">🔒 Completa tu primer Pomodoro</div>
+        <div class="achievement" id="logro2">🔒 Completa un Pomodoro antes de las 8am</div>
+        <div class="achievement" id="logro3">🔒 Mantén 1 hora de concentración continua</div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <h2>📊 Dashboard</h2>
+      <canvas id="graficoConcentracion" width="300" height="200"></canvas>
+      <canvas id="graficoProductividad" width="300" height="200"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ClaraMente IA – Inspirado en la psicología del bienestar y la concentración</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
