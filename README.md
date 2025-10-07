@@ -17,7 +17,7 @@
 - **HTML5** – estructura  
 - **CSS3** – diseño y animaciones  
 - **JavaScript (ES6)** – lógica e interactividad  
-- **Chart.js** – visualización de datos  
+- **Chart.js** – visualización de datos
 
 ---
 
